@@ -304,34 +304,35 @@ h3.my-profession
     text-align: center;
     position: relative;
 }
-.home .home-img::after
-{
-    content: '';
-    position: absolute;
-    height: 80px;
-    width: 80px;
-    border-bottom: 10px solid var(--skin-color);
-    border-right: 10px solid var(--skin-color);
-    right: 20px;
-    bottom: -40px;
-}
-.home .home-img::before
-{
-    content: '';
-    position: absolute;
-    height: 80px;
-    width: 80px;
-    border-top: 10px solid var(--skin-color);
-    border-left: 10px solid var(--skin-color);
-    left: -20px;
-    top: -40px;
-}
+
 .home .home-img img
 {
     margin: auto;
     border-radius: 5px;
     height: 400px;
 }
+
+@media (max-width: 768px) {
+    .home .home-img {
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding: 0;              /* 🔹 कोई padding नहीं, edge-to-edge effect के लिए */
+        margin: 0;
+    }
+
+    .home .home-img img {
+        width: 90vw;            /* 🔹 पूरी viewport width */
+        height: 350px;           /* 🔹 जरूरत अनुसार आप इसे और बढ़ा सकते हैं */
+        display: block;
+        object-fit: cover;       /* 🔹 image को क्रॉप करके भी पूरा container भर दे */
+        border-radius: 0;        /* 🔹 edge-to-edge के लिए rounded corners हटा दीं */
+    }
+}
+
+
+
+
+
 .about .about-content
 {
     flex: 0 0 100%;
@@ -363,7 +364,7 @@ h3.my-profession
 {
     flex: 0 0 60%;
     max-width: 60%;
-    margin-top: 40px;
+    margin-top: 20px;
 }
 .about .about-content .personal-info .info-item
 {
