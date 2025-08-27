@@ -102,7 +102,7 @@ ul
     position: absolute;
     top: 100%;
     left: 0;
-    margin-top: 8px;
+   
 }
 .row
 {
@@ -635,14 +635,14 @@ h3.my-profession
     color: var(--skin-color);
     font-size: 25px;
     text-align: center;
-    margin-bottom: 20px;
+   
 }
 .contact-sub-title
 {
     color: var(--text-black-900);
     font-size: 15px;
     text-align: center;    
-    margin-bottom: 60px;
+    margin-bottom: 30px;
 }
 .contact .contact-info-item
 {
@@ -769,5 +769,109 @@ h3.my-profession
     {
       flex: 0 0 100%;
       max-width: 100%;
+    }
+}
+.skills-section {
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: black; 
+}
+
+.skills-section h5, 
+.skills-section .skills-title {
+    color: black; 
+}
+
+
+.skills-box {
+    width: 100%;
+    max-width: 900px;
+    /* background: linear-gradient(135deg, #eeeceb, #ee0979); Gradient background */
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    text-align: center;
+}
+
+.skills-title {
+    color: white;
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center; 
+}
+
+.skill-item {
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    width: calc(33.33% - 40px); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: #333;
+    font-weight: 500;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.skill-item h5 {
+    font-size: 1.2em;
+}
+
+.skill-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 768px) {
+    .skill-item {
+        width: calc(50% - 40px); 
+    }
+}
+
+@media (max-width: 480px) {
+    .skill-item {
+        width: 100%; 
+    }
+}
+
+
+/* Make the portfolio items appear in one row */
+.portfolio-row {
+    display: flex;
+    justify-content: space-between; /* Distribute items evenly across the row */
+    gap: 20px; /* Space between each portfolio item */
+    flex-wrap: nowrap; /* Prevent wrapping */
+}
+
+.portfolio-item {
+    width: calc(33.33% - 20px); /* Ensure three items fit in one row */
+    box-sizing: border-box;
+}
+
+.portfolio-img img {
+    width: 100%; /* Ensure the images fill their containers */
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .portfolio-item {
+        width: calc(50% - 20px); /* Two items per row on medium screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .portfolio-item {
+        width: 100%; /* One item per row on small screens */
     }
 }
